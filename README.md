@@ -1,0 +1,1 @@
+# Nurzhan-Zhumabekov-assignment-1-design-pattern
