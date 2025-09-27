@@ -1,19 +1,28 @@
 package org.example;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = {5, 3, 8, 4, 2, 7, 1, 6};
         Metrics m = new Metrics();
 
-        System.out.println("Before: " + Arrays.toString(arr));
-        MergeSort.sort(arr, m);
-        System.out.println("After:  " + Arrays.toString(arr));
+        int[] arr = {5, 3, 8, 4, 2, 7, 1, 6};
+        QuickSort.sort(arr, m);
+        System.out.println("QuickSort: " + Arrays.toString(arr));
 
-        System.out.println("Comparisons: " + m.comparisons);
-        System.out.println("Writes: " + m.writes);
-        System.out.println("Calls: " + m.calls);
-        System.out.println("Max depth: " + m.maxDepth);
+        m.reset();
+        int[] arr2 = {5, 3, 8, 4, 2, 7, 1, 6};
+        int kth = Select.kth(arr2, 3, m);
+        System.out.println("3rd smallest (Select): " + kth);
+
+        m.reset();
+        List<ClosestPair.Point> pts = List.of(
+                new ClosestPair.Point(0,0),
+                new ClosestPair.Point(1,1),
+                new ClosestPair.Point(2,2),
+                new ClosestPair.Point(5,5)
+        );
+        double d = ClosestPair.solve(new ArrayList<>(pts), m);
+        System.out.println("Closest pair distance: " + d);
     }
 }
