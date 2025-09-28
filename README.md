@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 # Nurzhan-Zhumabekov-assignment-1-design-pattern
-=======
+
 Assignment 1 – Algorithms Report
 Student: Nurzhan Zhumabekov
 Architecture Notes
@@ -34,4 +34,3 @@ Depth vs n showed a logarithmic growth for both algorithms. QuickSort had slight
 Constant factors mattered: MergeSort had higher memory allocations due to arrays, while QuickSort benefited from cache locality. Java garbage collection also sometimes added spikes to timings.
 Summary
 In general, my results matched the theoretical expectations. MergeSort and QuickSort both behaved as Θ(n log n). QuickSort was faster in practice, but MergeSort was more stable. The Select algorithm showed linear behavior but with bigger constants. The Closest Pair algorithm was clearly faster than brute force and followed the Θ(n log n) curve. The measurements confirmed that theory gives the correct asymptotic picture, but in real code constant factors like memory reuse and recursion strategy make a big difference.
->>>>>>> 263d989cec23c19bd119eef5350d227678d8878b
