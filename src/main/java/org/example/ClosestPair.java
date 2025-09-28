@@ -8,9 +8,19 @@ public class ClosestPair {
         Point(double x, double y) { this.x = x; this.y = y; }
     }
 
+
     public static double solve(List<Point> pts, Metrics m) {
         pts.sort(Comparator.comparingDouble(p -> p.x));
         return rec(pts, 0, pts.size(), m);
+    }
+
+
+    public double closest(int[][] points) {
+        List<Point> pts = new ArrayList<>();
+        for (int[] p : points) {
+            pts.add(new Point(p[0], p[1]));
+        }
+        return solve(pts, new Metrics());
     }
 
     private static double rec(List<Point> pts, int l, int r, Metrics m) {

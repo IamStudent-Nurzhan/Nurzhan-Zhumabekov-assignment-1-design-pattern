@@ -5,4 +5,5 @@ org\example\ClosestPair$Point.class
 org\example\Metrics.class
 org\example\Util.class
 org\example\ClosestPair.class
+org\example\ClosestPairNaive.class
 org\example\Select.class
